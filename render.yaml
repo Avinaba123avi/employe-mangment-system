@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: laravel-11-app
+    env: php
+    buildCommand: "./build.sh"
+    startCommand: "php artisan serve --host=0.0.0.0 --port=10000"
+    plan: free
+    branch: main
+    staticPublishPath: public
+    autoDeploy: true
