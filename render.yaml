@@ -1,10 +1,10 @@
 services:
   - type: web
     name: laravel-11-app
-    env: php
-    buildCommand: "./build.sh"
-    startCommand: "php artisan serve --host=0.0.0.0 --port=10000"
+    runtime: php
     plan: free
+    repo: https://github.com/Avinaba123avi/employe-mangment-system
     branch: main
-    staticPublishPath: public
+    buildCommand: ./build.sh
+    startCommand: php artisan serve --host=0.0.0.0 --port=10000
     autoDeploy: true
