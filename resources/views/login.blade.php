@@ -9,6 +9,11 @@
     <meta name="author" content="">
 
     <title>SB Admin 2 - Login</title>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -68,8 +73,12 @@
                                     </div>
                                     @endif
                                     @if (session()->has('error'))
-                                    <div class="alert alert-danger success-message">
+                                    {{-- <div class="alert alert-danger success-message">
                                     {{ session('error') }}
+                                    </div> --}}
+                                    <div class="alert alert-danger alert-dismissible fade show">
+                                       {{ session('error') }}
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                                     </div>
                                     @endif
                                     <form action="{{ route('user.login') }}" class="user" method="POST">

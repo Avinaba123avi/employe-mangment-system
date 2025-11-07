@@ -1,4 +1,4 @@
-{{-- @if(Auth::user()->hasRole('admin')) --}}
+@if(Auth::user()->hasRole('admin'))
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -174,7 +174,7 @@
     });
     </script>
 
-{{-- @endif --}}
+@endif
 
 @if(Auth::user()->hasRole('manager'))
 <div class="container-fluid">

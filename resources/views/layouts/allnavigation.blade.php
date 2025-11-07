@@ -9,8 +9,8 @@
                     
 
     <!-- Sidebar - Brand -->
-    {{-- @if(Auth::user()->hasRole('admin')) --}}
-    {{-- @can('admin') --}}
+    @if(Auth::user()->hasRole('admin'))
+    @can('admin')
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
@@ -27,10 +27,10 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
-    {{-- @endcan --}}
-    {{-- @endif --}}
+    @endcan
+    @endif
 
-    {{-- @if(Auth::user()->hasRole('manager')) --}}
+    @if(Auth::user()->hasRole('manager'))
     @can('manager')
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/manager">
         <div class="sidebar-brand-icon rotate-n-15">
@@ -49,9 +49,9 @@
             <span>Dashboard</span></a>
     </li>
     @endcan
-    {{-- @endif --}}
+    @endif
 
-    {{-- @if(Auth::user()->hasRole('employee')) --}}
+    @if(Auth::user()->hasRole('employee'))
     @can('employee')
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
@@ -70,10 +70,10 @@
             <span>Dashboard</span></a>
     </li>
     @endcan
-    {{-- @endif --}}
+    @endif
 
     <!-- Nav Item - Pages Collapse Menu -->
-    {{-- @if(Auth::user()->hasRole('admin')) --}}
+    @if(Auth::user()->hasRole('admin'))
 
     <hr class="sidebar-divider">
 
@@ -95,7 +95,7 @@
             </div>
         </div>
     </li>
-    {{-- @endif --}}
+    @endif
 
     @if(Auth::user()->hasRole('manager'))
     <hr class="sidebar-divider">
